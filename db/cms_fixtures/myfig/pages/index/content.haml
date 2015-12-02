@@ -1,0 +1,46 @@
+:javascript
+  $(document).ready(function(){
+    $('#moreinfolink').click(function(e){
+      e.preventDefault();
+      $('html,body').animate({
+        scrollTop: $('#moreinfo').offset().top
+      });
+    });
+  });
+
+#homehero{ data: { parallax: 'scroll', image: { src: '{{cms:file:herorendering.jpg}}' }, speed: 0.87 } }
+  .homehero-overlaywrap
+    .homehero-overlay.animated.bounceInDown
+      %h1 MyFigueroa
+      %div Coming in 2017!
+
+      .linebreak
+
+      %a#moreinfolink{ href: '#moreinfo' } Let's Fig it out {{cms:file:downtick.svg:image}}
+
+#homemap
+  .homemap-overlaywrap
+    .homemap-overlay.animated.bounceInUp
+      {{cms:file:icons.png:image}}
+      %h2 MyFigueroa will be a safer Figueroa Street for everyone
+      %p The MyFigueroa Streetscape Project (MyFig) will bring safety improvements for bicycle and transit users— and a better Figueroa for us all. Construction is happening in 2016.
+
+  .homemap-widthadjust
+    {{cms:snippet:figmap}}
+
+  .homemap-menuoverlay
+    .homemap-menucontainer
+      %a#moreinfo.bluebox{ href: '/about' }
+        %dl
+          %dt More info
+          %dd Learn more about MyFig
+
+      %a.bluebox{ href: '/getting_around' }
+        %dl
+          %dt Fig it Out!
+          %dd Learn how to get around
+
+      %a.bluebox{ href: 'businesses' }
+        %dl
+          %dt Businesses
+          %dd MyFig for businesses

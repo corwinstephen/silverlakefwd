@@ -1,0 +1,34 @@
+%header.cf
+  .roadoverlay {{cms:file:roadoverlay.svg:image}}
+  .header-left
+    %a.spanlink{ href: '/' }
+    .header-mark Let's Fig it Out!
+    .header-byline Try a different way to go during MyFigueroa Construction in 2016
+
+  .header-right
+    .header-secondarymark
+      {{cms:file:icons.png:image}}
+      MyFigueroa
+
+%nav
+  %a{ href: '/about', class: '{{cms:helper:activeclass:about}}' } What is MyFig
+  %a{ href: '/getting_around', class: '{{cms:helper:activeclass:getting_around}}' } Fig Out How to Get Around
+  %a{ href: '/businesses', class: '{{cms:helper:activeclass:businesses}}' } MyFig for Businesses
+  %a{ href: '/sign_up', class: '{{cms:helper:activeclass:sign_up}}' } Sign Up For Updates
+  %a.float-right{ href: 'http://translate.google.com/translate?hl=&sl=en&tl=es&u=http%3A%2F%2Fmyfigueroa.com' } Español
+
+%main
+  {{ cms:page:content }}
+
+%footer.cf
+  %span.footer-brand MyFigueroa
+  %span.footer-partners
+    %a.icon{ target: '_blank', href: 'http://www.metro.net/' } {{cms:file:metrologo.png:image}}
+    %a.icon{ target: '_blank', href: 'http://lacity.org/' }
+      {{cms:file:cityoflalogo.png:image}}
+    %span <a target='_blank' href='http://lacity.org/'>City of Los Angeles</a>
+    %span This project is partially funded by <a href='https://www.metroexpresslanes.net/en/home/index.shtml'>Metro ExpressLanes</a>
+  %span.footer-social
+    %a.icon{ target: '_blank', href: 'https://www.facebook.com/whatsyourfigueroa' } {{ cms:file:icon-facebook-gold.svg:image }}
+    %a.icon{ target: '_blank', href: 'https://twitter.com/myfigueroa' } {{ cms:file:icon-twitter-gold.svg:image }}
+    %a{ href: 'mailto:David Somers <david.somers@lacity.org>' } Contact
