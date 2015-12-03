@@ -1,0 +1,24 @@
+:javascript
+  $(function(){
+    setTimeout(function(){
+      $('#homehero-wrap').addClass('loaded');
+    }, 3000);
+  });
+
+#homehero-wrap
+  #homehero
+    #homehero-img{ style: "background-image:url('{{cms:file:homehero.jpg}}');" }
+    #homehero-imggrid{ style: "background-image:url('{{cms:file:grid.png}}');" }
+    #homehero-overlay
+
+    #homehero-titlewrap
+      .homehero-title Silver Lake Forward
+      .homehero-subtitle
+        We're a nonprofit dedicated to making the Silverlake Reservoir into a <strong>world-class public space</strong>, celebrating access, beauty and conservation. 
+
+  #homerenderings
+    %div{ style: "background-image:url('{{cms:file:silverlakeforward-rendering1.jpg}}');" }
+    %div{ style: "background-image:url('{{cms:file:silverlakeforward-rendering2.jpg}}');" }
+    %div
+      %h1 Join us
+      
