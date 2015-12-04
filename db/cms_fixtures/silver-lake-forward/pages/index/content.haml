@@ -2,13 +2,16 @@
   $(function(){
     setTimeout(function(){
       $('#homehero-wrap').addClass('loaded');
+
+      setTimeout(function(){
+        $('#remaking, #plan').addClass('visible');
+      }, 1000);
     }, 3000);
   });
 
 #homehero-wrap
   #homehero
     #homehero-img{ style: "background-image:url('{{cms:file:homehero.jpg}}');" }
-    #homehero-imggrid{ style: "background-image:url('{{cms:file:grid.png}}');" }
     #homehero-overlay
 
     #homehero-titlewrap
@@ -21,4 +24,29 @@
     %div{ style: "background-image:url('{{cms:file:silverlakeforward-rendering2.jpg}}');" }
     %div
       %h1 Join us
-      
+
+.section.map.cf
+  {{cms:file:silverlakeforward-map.jpg:image}}
+
+  .overlay#remaking
+    %h1 Remaking the lake
+    %p The Silver Lake Reservoirs system is being brought offline and will no longer store drinking water for Los Angeles.  This creates an incredible opportunity for the City of Los Angeles, the Department of Water and Power, our elected officials, our design community, and for the residents of Los Angeles to create an incredible new public resource.
+.section.plan.cf
+  {{cms:file:silverlakeforward-rendering3.jpg:image}}
+
+  .overlay#plan
+    %h1 Our plan
+    %p We are encouraging the City to create a robust community planning process and feasibility study to determine the future of this amazing public asset. In the short term, we're asking DWP to implement the following changes while the reservoir is drained/ during 2016:
+    %ul
+      %li
+        %strong Remove the fences surrounding the reservoir
+      %li
+        %strong Remove the asphalt inside the reservoir basin wherever possible
+      %li
+        %strong Add a new restroom or provide access to an existing on-site restroom facility for the users of the Silver Lake Meadow
+
+.section#news
+  .centercolumn
+    This is where news goes
+
+.section#board
