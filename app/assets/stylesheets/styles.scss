@@ -158,9 +158,9 @@ strong {
 
 ul {
   background-color:rgba(#fff, 1);
-  box-shadow:0 .5px 2px 0 rgba(#000, .3);
+  box-shadow:0 .5px 1.5px 0 rgba(#000, .3);
   padding:1rem;
-  border-radius:3px;
+  border-radius:1px;
     
   li {
     margin-bottom:1rem;
@@ -236,6 +236,13 @@ ul {
   font-family:$font-title;
   font-size:22px;
   margin-bottom:10px;
+
+  img {
+    width:46px;
+    height:28px;
+    vertical-align:middle;
+    display:inline-block;
+  }
 }
 
 .homehero-subtitle {
@@ -249,12 +256,12 @@ ul {
 #homehero-wrap.loaded {
   #homehero {
     width:61.8%;
-    transition:width .5s;
+    transition:width .5s ease-in;
   }
 
   #homerenderings {
     width:38.2%;
-    transition: width .5s;
+    transition:width .5s ease-in;
   }
 }
 
