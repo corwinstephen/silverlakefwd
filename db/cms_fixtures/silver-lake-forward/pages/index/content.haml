@@ -1,12 +1,26 @@
 :javascript
   $(function(){
+    // Queue full hero info
     setTimeout(function(){
       $('#homehero-wrap').addClass('loaded');
 
       setTimeout(function(){
-        $('#remaking, #plan').addClass('visible');
+        $('#remaking').addClass('visible');
       }, 1000);
     }, 3000);
+
+    $('#remaking').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
+      if(visiblePartY === 'bottom'){
+        $(this).addClass('visible');
+      }
+    });
+    
+    $('#plan').bind('inview', function(e, isInView){
+      if(isInView){
+        $(this).addClass('visible');
+      }
+    });
+
   });
 
 #homehero-wrap
@@ -56,8 +70,41 @@
       {{cms:file:icon-facebook.svg:image}}
       %img{ src: '{{cms:file:icon-twitter.svg}}', style: 'width:34px; height:29px;'}
 
-.section#news
-  .centercolumn
-    This is where news goes
+{{cms:partial:comfy/blog/posts/homepost}}
 
 .section#board
+  .centercolumn
+    .board-header
+      %h1 Our board
+      %p In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Questions? Please reach out to <a href="mailto:contact@silverlakeforward.com">contact@silverlakeforward.com</a>
+
+    %ul.cf
+      %li
+        %dl
+          %dt Catherine Geanuracos
+          %dd Catherine is has a background in snow shoe manufacturing and is a former astronaut. After crash-ladning an F16 in Silverlake at the age of 16, she decided never to leave.
+
+      %li
+        %dl
+          %dt Catherine Geanuracos
+          %dd Catherine is has a background in snow shoe manufacturing and is a former astronaut. After crash-ladning an F16 in Silverlake at the age of 16, she decided never to leave.
+
+      %li
+        %dl
+          %dt Catherine Geanuracos
+          %dd Catherine is has a background in snow shoe manufacturing and is a former astronaut. After crash-ladning an F16 in Silverlake at the age of 16, she decided never to leave.
+
+      %li
+        %dl
+          %dt Catherine Geanuracos
+          %dd Catherine is has a background in snow shoe manufacturing and is a former astronaut. After crash-ladning an F16 in Silverlake at the age of 16, she decided never to leave.
+
+      %li
+        %dl
+          %dt Catherine Geanuracos
+          %dd Catherine is has a background in snow shoe manufacturing and is a former astronaut. After crash-ladning an F16 in Silverlake at the age of 16, she decided never to leave.
+
+      %li
+        %dl
+          %dt Catherine Geanuracos
+          %dd Catherine is has a background in snow shoe manufacturing and is a former astronaut. After crash-ladning an F16 in Silverlake at the age of 16, she decided never to leave.

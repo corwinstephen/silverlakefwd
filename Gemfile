@@ -25,6 +25,7 @@ gem 'json'
 gem 'paperclip'
 gem 'puma'
 gem 'aws-sdk', '< 2.0'
+gem 'comfy_blog', '~> 1.12.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
