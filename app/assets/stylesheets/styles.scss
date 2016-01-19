@@ -296,13 +296,123 @@ strong {
   }
 }
 
+.home-signup {
+  p {
+    color:#fff;
+    font-size:18px;
+    text-align:center;
+    font-family:$font-title;
+    display:block;
+    width:100%;
+  }
+
+  h1 {
+    color:#fff;
+    font-size:14px;
+    text-align:center;
+    width:90px;
+    margin:0 auto 0 auto;
+    background-color:#000;
+    z-index:20;
+    position:relative;
+  }
+
+  .frameline {
+    height:0px;
+    border-bottom:1px solid rgba(#fff, .26);
+    position:relative;
+    top:-15px;
+    z-index:10;
+  }
+
+  .shift {
+    position:absolute;
+    padding:15px;
+    top:50%;
+    transform:translateY(-50%);
+    width:100%;
+    box-sizing:border-box;
+  }
+
+  #mc_embed_signup {
+    form {
+      padding:0;
+
+      .mc-field-group {
+        width:47%;
+        margin-right:2%;
+        display:inline-block;
+        min-height:0;
+
+        &:last-child {
+          margin-right:0;
+        }
+
+        .mce_inline_error {
+          margin: 0 0 1em 0;
+          padding: 7px 0px;
+          background:none;
+          font-weight: normal;
+          z-index: 1;
+          color: #fff;
+        }
+
+        input {
+          background:none;
+          border:none;
+          border-bottom:1px solid #fff;
+          float:left;
+          color:#fff;
+          font-family:$font-body;
+          font-size:14px;
+          outline:none;
+
+        }
+
+        ::-webkit-input-placeholder {
+          color:rgba(#fff, .26);
+        }
+
+        :-moz-placeholder {
+          color:rgba(#fff, .26);
+        }
+
+        ::-moz-placeholder {
+          color:rgba(#fff, .26);
+        }
+
+        :-ms-input-placeholder {
+          color:rgba(#fff, .26);
+        }
+
+        ::-ms-input-placeholder {
+          color:rgba(#fff, .26);
+        }
+
+        :placeholder-shown {
+          color:rgba(#000, .26);
+        }
+
+      }
+
+      #mc-embedded-subscribe.button {
+        background-color:$color-blue;
+        color:#fff;
+        border-radius:0;
+        width:100%;
+        font-family:$font-title;
+        font-size:12px;
+      }
+    }
+  }
+}
 
 .homerenderings-overlay {
   background-color:rgba(#000, .75);
   bottom:0;
   color:#fff;
   font-family:$font-title;
-  font-size:24px;
+  font-size:20px;
   height:inherit;
   left:0;
   line-height:33.33333vh;
@@ -376,16 +486,17 @@ strong {
         z-index:20;
 
         @media(max-width: 850px){
-          position:relative;
-          max-width:none;
-          top:0;
-          transform:none;
           transition:none;
-          box-shadow:none;
         }
       }
 
       @media(max-width: 850px){
+        top:0;
+        margin-top:0;
+        box-shadow:none;
+        max-width:none;
+        transform:none;
+        position:relative;
         border:none;
         left:0;
         opacity:1;
