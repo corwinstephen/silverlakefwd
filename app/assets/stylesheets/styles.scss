@@ -201,7 +201,7 @@ strong {
 }
 
 #homehero-overlay {
-  background-color:rgba(#000, .22);
+  background-color:rgba(#000, .26);
 }
 
 #homehero-titlewrap {
@@ -428,7 +428,7 @@ strong {
   max-width:$center-column-width * .618;
   margin:auto;
   text-align:center;
-  border-bottom:1px solid $color-grey;
+  border-bottom:1px solid #ddd;
   padding-bottom:3rem;
   margin-bottom:3rem;
 }
@@ -459,9 +459,15 @@ footer {
 .footer-social {
   float:right;
 
+  a {
+    display:inline-block;
+    margin-left:1rem;
+    margin-top:5px;
+  }
+
   img {
     height:1.5rem;
-    margin-left:1rem;
+    vertical-align:middle;
 
     &:first-child {
       margin-left:0;
@@ -498,6 +504,6 @@ footer {
   }
 
   a {
-    
+
   }
 }

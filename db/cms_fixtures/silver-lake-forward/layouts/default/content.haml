@@ -6,9 +6,12 @@
   .footer-legal
     .footer-legalline This is the where the legal byline will go when we have it.
     .footer-attr
-      Site by <a href='http://compiler.la'>Compiler LA</a>
+      Site by <a href='http://compiler.la' target='_blank'>Compiler LA</a>
   .footer-contact
   .footer-social
-    {{cms:file:icon-facebook-grey.svg:image}}
-    {{cms:file:icon-instagram-grey.svg:image}}
-    {{cms:file:icon-twitter-grey.svg:image}}
+    %a{ href: 'https://www.facebook.com/silverlakeforward', target: '_blank' }
+      {{cms:file:icon-facebook-grey.svg:image}}
+    %a{ href: 'https://www.instagram.com/silverlakeforward', target: '_blank' }
+      {{cms:file:icon-instagram-grey.svg:image}}
+    %a{ href: 'https://twitter.com/SilverLakeFwd', target: '_blank' }
+      {{cms:file:icon-twitter-grey.svg:image}}
