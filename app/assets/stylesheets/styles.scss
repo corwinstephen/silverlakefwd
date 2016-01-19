@@ -79,6 +79,14 @@ a {
     color:$color-green;
     text-decoration:underline;
   }
+
+  &.boxlink {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
 }
 
 body {
@@ -257,11 +265,22 @@ strong {
   width:0;
   height:100%;
 
+  a {
+    z-index:20;
+  }
+
   & > div {
     height:33.33333vh;
     background-repeat:no-repeat;
     background-position:center -115px;
     position:relative;
+
+    &:hover {
+      .homerenderings-overlay {
+        opacity:1;
+        transition:opacity .35s;
+      }
+    }
   }
 }
 
@@ -280,11 +299,6 @@ strong {
   text-align:center;
   text-transform:uppercase;
   top:0;
-
-  &:hover {
-    opacity:1;
-    transition:opacity .35s;
-  }
 }
 
 .section {
@@ -373,6 +387,12 @@ strong {
     height:29px;
     width:29px;
     display:inline-block;
+  }
+
+  .twitter-share-button-rendered.twitter-tweet-button {
+    position:relative !important;
+    top:10px;
+    left:5px;
   }
 }
 

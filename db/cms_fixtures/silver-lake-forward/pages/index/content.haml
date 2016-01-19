@@ -21,6 +21,16 @@
       }
     });
 
+
+    // Sharing
+    $('.fbshare').click(function(e){
+      e.preventDefault();
+      FB.ui({
+        method: 'share',
+        href: 'http://silverlakeforward.com',
+      }, function(response){});
+    });
+
   });
 
 #homehero-wrap
@@ -37,8 +47,10 @@
 
   #homerenderings
     %div{ style: "background-image:url('{{cms:file:silverlakeforward-rendering1.jpg}}');" }
+      %a.boxlink{ href: '{{cms:file:silverlakeforward-renderings.zip}}' }
       .homerenderings-overlay Download renderings
     %div{ style: "background-image:url('{{cms:file:silverlakeforward-rendering2.jpg}}');" }
+      %a.boxlink{ href: '{{cms:file:silverlakeforward-renderings.zip}}' }
       .homerenderings-overlay Download renderings
     %div
       %h1 Join us
@@ -52,8 +64,9 @@
     %p The Silver Lake Reservoirs system is being brought offline and will no longer store drinking water for Los Angeles.  This creates an incredible opportunity for the City of Los Angeles, the Department of Water and Power, our elected officials, our design community, and for the residents of Los Angeles to create an incredible new public resource.
     .overlay-share
       Share this
-      {{cms:file:icon-facebook.svg:image}}
-      %img{ src: '{{cms:file:icon-twitter.svg}}', style: 'width:34px; height:29px;'}
+      %a.fbshare{href: '#'} {{cms:file:icon-facebook.svg:image}}
+      %a.twitter-share-button{ 'href' => 'https://twitter.com/intent/tweet', 'data-size' => 'large' }
+        %img{ src: '{{cms:file:icon-twitter.svg}}', style: 'width:34px; height:29px;'}
 
 .section.plan.cf
   {{cms:file:silverlakeforward-rendering3.jpg:image}}
@@ -67,8 +80,9 @@
       %li - Add a new restroom or provide access to an existing on-site restroom facility for the users of the Silver Lake Meadow
     .overlay-share
       Share this
-      {{cms:file:icon-facebook.svg:image}}
-      %img{ src: '{{cms:file:icon-twitter.svg}}', style: 'width:34px; height:29px;'}
+      %a.fbshare{href: '#'} {{cms:file:icon-facebook.svg:image}}
+      %a.twitter-share-button{ 'href' => 'https://twitter.com/intent/tweet', 'data-size' => 'large' }
+        %img{ src: '{{cms:file:icon-twitter.svg}}', style: 'width:34px; height:29px;'}
 
 {{cms:partial:comfy/blog/posts/homepost}}
 
