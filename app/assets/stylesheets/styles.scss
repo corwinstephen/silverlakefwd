@@ -223,6 +223,10 @@ strong {
   background: linear-gradient(to right, rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54000000', endColorstr='#00000000',GradientType=1 );
   padding:2rem;
+
+  @media(max-width: 850px){
+    min-width:400px;
+  }
 }
 
 .homehero-title {
@@ -251,6 +255,10 @@ strong {
   #homehero {
     width:61.8%;
     transition:width .5s ease-in;
+
+    @media(max-width: 850px){
+      width:100%;   
+    }
   }
 
   #homerenderings {
@@ -264,6 +272,10 @@ strong {
   background-color:#111;
   width:0;
   height:100%;
+
+  @media(max-width: 850px){
+    display:none;
+  }
 
   a {
     z-index:20;
@@ -283,6 +295,7 @@ strong {
     }
   }
 }
+
 
 .homerenderings-overlay {
   background-color:rgba(#000, .75);
@@ -323,6 +336,23 @@ strong {
         top:-20px;
         opacity:1;
         transition:all 1s;
+        z-index:20;
+
+        @media(max-width: 850px){
+          position:relative;
+          max-width:none;
+          top:0;
+          transform:none;
+          transition:none;
+          box-shadow:none;
+        }
+      }
+
+      @media(max-width: 850px){
+        border:none;
+        left:0;
+        opacity:1;
+        outline:none;
       }
     }
   }
@@ -343,6 +373,23 @@ strong {
         margin-top:0;
         opacity:1;
         transition:all 1s;
+        z-index:20;
+
+        @media(max-width: 850px){
+          position:relative;
+          max-width:none;
+          top:0;
+          transform:none;
+          transition:none;
+          box-shadow:none;
+        }
+      }
+
+      @media(max-width: 850px){
+        border:none;
+        left:0;
+        opacity:1;
+        outline:none;
       }
     }
   }
@@ -410,6 +457,7 @@ strong {
 .centercolumn {
   max-width:$center-column-width;
   margin:0 auto;
+  padding:0 20px;
 
   &.narrow {
     max-width:$center-column-width * .618;
@@ -466,14 +514,35 @@ footer {
     margin-top:8px;
     vertical-align:middle;
   }
+
+  @media(max-width: 550px){
+    float:none;
+    text-align:center;
+    margin-right:0;
+    margin-bottom:10px;
+
+    img {
+      height:30px;
+    }
+  }
 }
 
 .footer-legal {
   float:left;
+
+  @media(max-width: 550px){
+    float:none;
+    text-align:center;
+    margin-right:0;
+  }
 }
 
 .footer-legalline {
   margin-bottom:10px;
+
+  @media(max-width: 550px){
+    font-size:12px;
+  }
 }
 
 .footer-social {
@@ -493,6 +562,12 @@ footer {
       margin-left:0;
     }
   }
+
+  @media(max-width: 550px){
+    display:block;
+    text-align:center;
+    width:100%;
+  }
 }
 
 .footer-contact {
@@ -506,6 +581,10 @@ footer {
   a {
     color:$color-blue;
     font-weight:bold;
+  }
+
+  @media(max-width: 550px){
+    margin-bottom:10px;
   }
 }
 
