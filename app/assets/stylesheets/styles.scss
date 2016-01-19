@@ -34,10 +34,11 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size:14px;
   font: inherit;
   vertical-align: baseline;
   font-family:$font-body;
+  
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -366,6 +367,7 @@ strong {
           font-family:$font-body;
           font-size:14px;
           outline:none;
+          font-weight:100;
 
         }
 
@@ -514,10 +516,15 @@ strong {
   outline:5px solid rgba(#fff, .94);
 
   h1 {
-    margin-bottom:2rem;
+    margin-bottom:1rem;
+  }
+
+  p {
+    font-weight:100;
   }
 
   ul {
+    font-weight:100;
     background-color:rgba(#fff, 1);
     box-shadow:0 .5px 1.5px 0 rgba(#000, .3);
     padding:1rem;
@@ -700,6 +707,8 @@ footer {
 }
 
 .richtext {
+  font-weight:100;
+
   ul {
     list-style:disc;
     margin-left:12px;
