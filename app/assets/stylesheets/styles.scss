@@ -487,13 +487,13 @@ strong {
 
         @media(max-width: 850px){
           transition:none;
+          box-shadow:none;
         }
       }
 
       @media(max-width: 850px){
         top:0;
         margin-top:0;
-        box-shadow:none;
         max-width:none;
         transform:none;
         position:relative;
