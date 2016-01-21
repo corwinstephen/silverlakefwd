@@ -372,27 +372,27 @@ strong {
         }
 
         ::-webkit-input-placeholder {
-          color:rgba(#fff, .26);
+          color:rgba(#fff, .54);
         }
 
         :-moz-placeholder {
-          color:rgba(#fff, .26);
+          color:rgba(#fff, .54);
         }
 
         ::-moz-placeholder {
-          color:rgba(#fff, .26);
+          color:rgba(#fff, .54);
         }
 
         :-ms-input-placeholder {
-          color:rgba(#fff, .26);
+          color:rgba(#fff, .54);
         }
 
         ::-ms-input-placeholder {
-          color:rgba(#fff, .26);
+          color:rgba(#fff, .54);
         }
 
         :placeholder-shown {
-          color:rgba(#000, .26);
+          color:rgba(#000, .54);
         }
 
       }
@@ -657,6 +657,7 @@ footer {
 
 .footer-legalline {
   margin-bottom:10px;
+  color:rgba(#000, .54);
 
   @media(max-width: 550px){
     font-size:12px;
@@ -685,6 +686,11 @@ footer {
     display:block;
     text-align:center;
     width:100%;
+
+    & > span {
+      display:block;
+      margin:1rem 0;
+    }
   }
 }
 
