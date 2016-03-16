@@ -121,6 +121,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom:1rem;
   font-family:$font-title;
   text-transform:uppercase;
+
+  & > a {
+    margin-bottom:1rem;
+    font-family:$font-title;
+    text-transform:uppercase;
+    color:rgba(#000, .87);
+  }
 }
 
 h1 {
@@ -730,5 +737,9 @@ footer {
 
   a {
 
+  }
+
+  img {
+    max-width:100%;
   }
 }
