@@ -1,18 +1,8 @@
-%h1 Blog Post
 
-%h1= @post.title
 
-.author
-  = @post.author
-.date
-  = @post.published_at.to_s(:db)
-.content
-  = @post.content.html_safe
-
-.comments
-  - @post.comments.published.each do |comment|
-    .comment
-      .author= comment.author
-      .content= comment.content
-  
-  = render :partial => 'comfy/blog/comments/form'
+.section#news
+  .centercolumn.narrow
+    .news-date= "Update:&nbsp;&nbsp;#{@post.created_at.strftime('%B %d, %Y')}".html_safe
+    %h1= link_to @post.title, comfy_blog_post_path('', @post.blog.path, @post.slug)
+    .richtext= truncate_html(@post.content, length: 1000).html_safe
+    = link_to "See all blog posts", comfy_blog_posts_path('', @post.blog)
