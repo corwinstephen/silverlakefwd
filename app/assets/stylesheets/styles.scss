@@ -579,6 +579,12 @@ strong {
   font-style:italic;
 }
 
+.blogpost {
+  padding-bottom:2rem;
+  margin-bottom:2rem;
+  border-bottom:1px solid #ccc;
+}
+
 .centercolumn {
   max-width:$center-column-width;
   margin:0 auto;
@@ -742,4 +748,16 @@ footer {
   img {
     max-width:100%;
   }
+}
+
+.margin-top {
+  margin-top:1rem;
+}
+
+.margin-bottom {
+  margin-bottom:1rem;
+}
+
+hr {
+  margin:2rem 0;
 }

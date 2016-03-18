@@ -5,4 +5,6 @@
         .news-date= "Update:&nbsp;&nbsp;#{post.created_at.strftime('%B %d, %Y')}".html_safe
         %h1= link_to post.title, comfy_blog_post_path('', post.blog.path, post.slug)
         .richtext= truncate_html(post.content, length: 1000).html_safe
-        = link_to "Read full post", comfy_blog_post_path('', post.blog.path, post.slug)
+
+        - if truncate_html(post.content, length: 1000).length < post.content.length
+          .margin-top= link_to "Read full post", comfy_blog_post_path('', post.blog.path, post.slug)
