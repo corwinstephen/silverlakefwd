@@ -9,4 +9,4 @@
         - if truncate_html(post.content, length: 1000).length < post.content.length
           .margin-top= link_to "Read full post", comfy_blog_post_path('', post.blog.path, post.slug)
 
-      .margin-top= link_to "See all blog posts", '/blog'
+      .margin-top= link_to "See all blog posts", '/blog', style: 'font-family:"DayPosterBlack"; text-transform:uppercase;'
