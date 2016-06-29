@@ -1,7 +1,7 @@
-- if Comfy::Blog::Post.order('created_at DESC').limit(1).any?
+- if (posts = Comfy::Blog::Post.published.order('created_at DESC').limit(1)).any?
   .section#news
     .centercolumn.narrow
-      - Comfy::Blog::Post.order('created_at DESC').limit(1).each do |post|
+      - posts.each do |post|
         .news-date= "Update:&nbsp;&nbsp;#{post.created_at.strftime('%B %d, %Y')}".html_safe
         %h1= link_to post.title, comfy_blog_post_path('', post.blog.path, post.slug)
         .richtext= truncate_html(post.content, length: 1000).html_safe
